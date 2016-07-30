@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+  "name": "Bank",
+  "description": "Курсы валют. Новый вид после деноминации.",
+  "version": "2.0",
+  "browser_action": {
+    "default_icon": {
+      "19": "icons/icon.png",
+      "38": "icons/icon.png"
+    },
+    "default_popup": "popup.html"
+  },
+  "options_page": "options.html",
+  "background": {
+    "scripts": [
+      "scripts/vendors/jquery.min.js",
+      "scripts/common.js",
+      "scripts/background.js"
+    ]
+  },
+  "permissions": [
+    "http://select.by/kurs/"
+  ],
+  "icons": {
+    "16": "icons/icon.png",
+    "48": "icons/icon.png",
+    "128": "icons/icon.png"
+  }
+}

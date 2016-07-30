@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Курсы валют. Новый вид после деноминации.</title>
+    <style>
+        body {
+            font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+            font-size: 13px;
+            width: 470px;
+        }
+
+        table {
+            margin-top: 5px;
+        }
+
+        table, tr, th, td {
+            border-collapse: collapse;
+            border: 1px solid black;
+        }
+
+        .bank:nth-child(even) {
+            background: #f1f4ff;
+        }
+
+        .bank:hover {
+            background: #fff9e9;
+        }
+
+        .best {
+            background: #d6e6ce;
+        }
+
+        .best-inverse {
+            color: green;
+            font-weight: bold;
+        }
+
+        td.active {
+            background: #fdf9e4;
+        }
+
+        .sort {
+            cursor: pointer;
+        }
+
+        .sort.showSort:after {
+            content: '\2191';
+        }
+
+        .sort.showSort.sortDown:after {
+            content: '\2193';
+        }
+
+        .sort.active {
+            background: #fdf9e4;
+        }
+
+        .updateData {
+            position: absolute;
+            top: 7px;
+            left: 250px;
+            font-size: 11px;
+        }
+
+        .settings {
+            position: absolute;
+            top: 7px;
+            left: 320px;
+            font-size: 11px;
+        }
+
+
+    </style>
+
+    <script src="scripts/vendors/jquery.min.js"></script>
+    <script src="scripts/common.js"></script>
+    <script src="scripts/main.js"></script>
+</head>
+<body>
+<div class="update"></div>
+<input type="button" href="#" class="updateData" value="Обновить"/>
+<input type="button" href="#" class="settings" value="Настройки"/>
+<table>
+    <thead>
+    <tr>
+        <th>Банк</th>
+        <th class="sort" sort="usdBay">USD<sup>пок</sup><span></span></th>
+        <th class="sort" sort="usdSell">USD<sup>пр</sup></th>
+        <th class="sort" sort="eurBay">EUR<sup>пок</sup></th>
+        <th class="sort" sort="eurSell">EUR<sup>пр</sup></th>
+        <th class="sort" sort="rubBay">RUB<sup>пок</sup></th>
+        <th class="sort" sort="rubSell">RUB<sup>пр</sup></th>
+    </tr>
+    </thead>
+    <tbody class="content"></tbody>
+</table>
+
+
+</body>
+</html>
+

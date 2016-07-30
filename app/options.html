@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Курсы валют. Настройки</title>
+    <style>
+        body {
+            font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+            font-size: 13px;
+            width: 470px;
+        }
+
+        .header {
+            background: #f1f4ff;
+            border-bottom: 1px solid #E9E9E9;
+            box-shadow: 0 0 8px rgba(0, 0, 0, .15);
+            position: fixed;
+            left: 0;
+            top: 0;
+            right: 0;
+            height: 80px;
+        }
+
+        .logo {
+            background: url('icons/icon.png');
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            border: 1px solid green;
+            top: 4px;
+            left: 20%
+        }
+
+        .wrapper {
+            position: absolute;
+            left: calc(20% + 80px);
+            color: #b1acac;
+            font-size: 18px;
+            top: 12px;
+        }
+
+        .wrapper .title {
+            font-weight: bold;
+        }
+
+        .control-panel {
+            position: absolute;
+            left: calc(20% + 400px);
+            font-size: 15px;
+            top: 26px;
+        }
+
+        .control-panel .item {
+            color: #3f90d8;
+            cursor: pointer;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        .content {
+            position: absolute;
+            top: 85px;
+            left: 20%;
+            width: 100%;
+        }
+        .panel {
+            padding: 10px;
+        }
+
+    </style>
+
+    <script src="scripts/vendors/jquery.min.js"></script>
+    <script src="scripts/common.js"></script>
+    <script src="scripts/options.js"></script>
+</head>
+<body>
+<div class="header">
+    <div class="logo"></div>
+    <div class="wrapper">
+        <div class="title">Курсы валют.</div>
+        <div class="description">Новый вид после деноминации.</div>
+    </div>
+    <div class="control-panel">
+        <div class="item">Настройки</div>
+    </div>
+</div>
+<div class="content">
+    <div class="options">
+        <div class="panel selectCity">
+            <label>Город
+                <select class="city">
+                    <option value="">Минск</option>
+                    <option value="/grodno/">Гродно</option>
+                    <option value="/brest/">Брест</option>
+                    <option value="/gomel/">Гомель</option>
+                    <option value="/mogilev/">Могилёв</option>
+                    <option value="/vitebsk/">Витебск</option>
+                </select>
+            </label>
+        </div>
+        <div class="panel selectCurrency">
+            <label>Валюта
+                <select class="сurrency">
+                    <option value="usdBay">USD покупка</option>
+                    <option value="usdSell">USD продажа</option>
+                    <option value="eurBay">EUR покупка</option>
+                    <option value="eurSell">EUR продажа</option>
+                    <option value="rubBay">RUB покупка</option>
+                    <option value="rubSell">RUB продажа</option>
+                </select>
+            </label>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
